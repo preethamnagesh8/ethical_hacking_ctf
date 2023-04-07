@@ -36,6 +36,7 @@ COPY --chown=appuser:appuser . .
 USER root
 RUN chown root:root /app/vuln
 RUN chmod 4755 /app/vuln
+RUN chmod 755 /app/exec.sh
 
 USER appuser
 # Run migrations
