@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y python3 python3-pip tzdata
 
 RUN apt-get update && apt-get install -y gcc-multilib build-essential gdb
-RUN apt-get update && apt-get install -y net-tools iputils-ping netcat-openbsd vim-tiny
+RUN apt-get update && apt-get install -y net-tools iputils-ping netcat-openbsd vim-tiny python2
 
 RUN echo "kernel.randomize_va_space=0" > /etc/sysctl.d/01-disable-aslr.conf
 
