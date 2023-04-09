@@ -34,9 +34,9 @@ RUN pip3 install -r requirements.txt
 COPY --chown=appuser:appuser . .
 
 USER root
-RUN chown root:root /app/vuln
-RUN chmod 4755 /app/vuln
-RUN chmod 755 /app/exec.sh
+RUN chown root:root /app/vulnCode/vuln
+RUN chmod 4755 /app/vulnCode/vuln
+RUN chmod 755 /app/vulnCode/exec.sh
 
 USER appuser
 # Run migrations
