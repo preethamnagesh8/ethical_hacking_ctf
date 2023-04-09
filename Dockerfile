@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y gcc-multilib build-essential gdb zsh
 RUN apt-get update && apt-get install -y net-tools iputils-ping netcat-openbsd vim-tiny python2
 
 RUN echo "kernel.randomize_va_space=0" > /etc/sysctl.d/01-disable-aslr.conf
-RUN ln -sf /bin/sh zsh
+RUN ln -sf zsh /bin/sh
 
 # Set the working directory
 WORKDIR /app
